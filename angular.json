@@ -17,6 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "aot": true,
             "outputPath": "dist/badge",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -55,6 +56,10 @@
                   "type": "initial",
                   "maximumWarning": "2mb",
                   "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb"
                 }
               ]
             }
@@ -110,5 +115,9 @@
       }
     }
   },
-  "defaultProject": "badge"
+  "defaultProject": "badge",
+  "cli": {
+    "packageManager": "npm",
+    "analytics": "25e593d6-220d-48c1-9c51-7fb82e8d0d24"
+  }
 }
