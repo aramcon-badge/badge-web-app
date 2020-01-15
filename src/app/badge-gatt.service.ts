@@ -44,7 +44,7 @@ export class BadgeGattService {
     for (let i = 0; i < this.lastImage.length; i++) {
       this.lastImage[i] = 0x0;
     }
-    
+
     const batteryCharacteristic = await svc.getCharacteristic(BATTERY_VOLTAGE_CHARACTERISTIC);
     this.batteryVoltage = new TextDecoder().decode(await batteryCharacteristic.readValue());
   }

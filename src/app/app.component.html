@@ -3,9 +3,9 @@
   <span class="header-fill"></span>
 
   <span *ngIf="connected && batteryVoltage" class="battery-level-indicator">
-    <mat-icon>battery_std</mat-icon>{{batteryVoltage}}v
+    <mat-icon>battery_std</mat-icon>{{ batteryVoltage }}v
   </span>
-  
+
   <mat-icon *ngIf="connected" (click)="disconnect()" title="Disconnect">bluetooth_connected</mat-icon>
 </mat-toolbar>
 

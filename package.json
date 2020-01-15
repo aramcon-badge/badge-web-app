@@ -34,8 +34,27 @@
     "@types/node": "^12.11.1",
     "@types/web-bluetooth": "^0.0.4",
     "codelyzer": "^5.1.2",
+    "husky": "^4.0.9",
+    "lint-staged": "^9.5.0",
+    "prettier": "^1.19.1",
     "ts-node": "^8.3.0",
     "tslint": "~5.19.0",
     "typescript": "~3.6.4"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{html,scss}": [
+      "prettier --write",
+      "git add"
+    ],
+    "*.{ts,tsx}": [
+      "tslint --fix",
+      "prettier --write",
+      "git add"
+    ]
   }
 }
